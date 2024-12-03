@@ -140,7 +140,7 @@ const stripeWebhook = async (req, res) => {
     const event = stripe.webhooks.constructEvent(
       req.body,
       sig,
-      'whsec_a715a6fa7f5bad34613162d543e4bc47ba90dcec2e8c1461188e390ddf3df454'
+      process.env.STRIPE_WEBHOOK_SECRET
     );
     console.log("event Recieved",event);
     // Check if the event is for a completed checkout session
