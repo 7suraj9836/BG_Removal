@@ -64,8 +64,8 @@ const createPaymentIntent = async (req, res) => {
       metadata: {
     clerkId: clerkId, // Pass the actual clerkId here
   },
-      success_url:"http://localhost:5173",
-      cancel_url:"http://localhost:5173" // Indian Rupee
+      success_url:"https://bg-removal-beta.vercel.app",
+      cancel_url:"https://bg-removal-beta.vercel.app" // Indian Rupee
       // Optional: Add additional payment options, such as "payment_method_types"
     });
    
